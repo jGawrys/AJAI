@@ -13,7 +13,7 @@ const s1 = p1 => {
 
 
     p1.setup = function() {
-        var canvas = p1.createCanvas(400, p1.windowHeight*0.35);
+        var canvas = p1.createCanvas(400, 350);
         canvas.parent('sketch_container_happy_sad');
         p1.rectMode(p1.CENTER);
         p1.imageMode(p1.CENTER);
