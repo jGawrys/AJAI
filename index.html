@@ -123,7 +123,16 @@
     </style>
   </head>
   <body>
+
+
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/poly-decomp@0.2.1/build/decomp.js"></script>
+    <script src="p5/header.js"></script>
+    <script src="p5/first.js"></script>
+
+
     <div>
       <link href="./index.css" rel="stylesheet" />
 
@@ -141,6 +150,8 @@
           </header>
         </div>
         <main class="home-main">
+          <div id="sketch_container_header" class="sketch_container"></div>
+
           <div class="section-container home-intro">
             <div class="home-max-width01 max-content-container">
               <div class="home-image-container">
@@ -308,6 +319,7 @@
               </div>
             </div>
           </div>
+
           <div class="section-container home-krytyka">
             <div class="home-max-width06 max-content-container">
               <h2 class="home-text16">Krytyka SI</h2>
@@ -469,6 +481,7 @@
             </div>
             <div class="home-image-container3"></div>
           </div>
+          <div id="sketch_container_happy_sad" class="sketch_container"></div>
           <div class="section-container home-korzysci">
             <div class="home-max-width10 max-content-container">
               <h2 class="home-text39">
