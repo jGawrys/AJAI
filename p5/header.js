@@ -31,7 +31,7 @@ let aiImg,
     przyszloscImg,
     rozwojImg,
     strachImg;
-
+let homeContainer = document.getElementById("home_container")
 
 let verts;
 function preload() {
@@ -46,7 +46,6 @@ function preload() {
   przyszloscImg= loadImage("p5/assets/przyszlosc.png");
   rozwojImg = loadImage("p5/assets/rozwoj.png");
   strachImg= loadImage("p5/assets/strach.png");
-
 }
 
 function setup() {
@@ -86,18 +85,24 @@ function setup() {
   boxes.push(new Box(200, 345, strachImg));
 
 
-  
-  mouseConstraint = MouseConstraint.create(engine);
-  canvasMouse = Mouse.create(document.getElementById("sketch_container_header"));
-  Mouse.setElement(canvasMouse, document.getElementById("sketch_container_header"))
+  canvasMouse = Mouse.create(canvas.elt);
+  let mouseOptions = {
+    mouse: canvasMouse
+  };
+  Mouse.setElement(canvasMouse, document.getElementById("sketch_container_header"));
+
   canvasMouse.pixelRatio = pixelDensity();
   
+  mouseConstraint = MouseConstraint.create(engine, mouseOptions);
+  mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
+  mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
   
 
   
 
   
   World.add(world, mouseConstraint);
+  World.add(world,canvasMouse)
 }
 
 function draw() {
@@ -110,9 +115,7 @@ function draw() {
   for (var i=0; i<boxes.length; i++) {
     boxes[i].show();
   }
-  
-  
-  
+
   
 }
 
