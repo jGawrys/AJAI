@@ -234,5 +234,8 @@
     padding-top: var(--dl-space-space-twounits);
     padding-bottom: var(--dl-space-space-twounits);
   }
+  .home-container {
+    overflow: scroll;
+  }
 }
 

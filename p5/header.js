@@ -85,24 +85,20 @@ function setup() {
   boxes.push(new Box(200, 345, strachImg));
 
 
-  canvasMouse = Mouse.create(canvas.elt);
-  let mouseOptions = {
-    mouse: canvasMouse
-  };
-  Mouse.setElement(canvasMouse, document.getElementById("sketch_container_header"));
+//   canvasMouse = Mouse.create(canvas.elt);
+//   let mouseOptions = {
+//     mouse: canvasMouse
+//   };
+//   Mouse.setElement(canvasMouse, document.getElementById("sketch_container_header"));
 
-  canvasMouse.pixelRatio = pixelDensity();
+//   canvasMouse.pixelRatio = pixelDensity();
   
-  mouseConstraint = MouseConstraint.create(engine, mouseOptions);
-  mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
-  mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
-  
+//   mouseConstraint = MouseConstraint.create(engine, mouseOptions);
+
 
   
-
-  
-  World.add(world, mouseConstraint);
-  World.add(world,canvasMouse)
+//   World.add(world, mouseConstraint);
+//   World.add(world,canvasMouse)
 }
 
 function draw() {
@@ -119,7 +115,3 @@ function draw() {
   
 }
 
-// function mouseDragged(){
-//   boxes.push(new Box(mouseX,mouseY,random(10,40),random(10,40)));
-
-// }
